@@ -177,3 +177,7 @@ instance/*
 .webassets-cache
 .env
 
+
+# IDE
+.idea
+.vscode
