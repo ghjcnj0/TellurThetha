@@ -1,0 +1,24 @@
+{% block body %}
+{% with message = get_flashed_messages(category_filter=["Registered"]) %}
+  {% if message %}
+    <ul class=flashes>
+      <li>{{ message }}</li>
+      <a href="/login">Log in?</a>
+    </ul>
+  {% endif %}
+{% endwith %}
+
+  <h1>Registration</h1>
+  {% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+  {% endif %}
+  <form action="" method=post>
+    <dl>
+      <dt>Username:
+      <input type=text name=username maxlength="35">
+      <dt>Password:
+      <input type=password name=password>
+    </dl>
+    <p><input type=submit value=Register>
+  </form>
+{% endblock %}
